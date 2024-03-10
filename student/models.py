@@ -59,3 +59,15 @@ class Examination(models.Model):
         return self.sub_name
 
 
+
+class marks(models.Model):
+
+    stu_name = models.ForeignKey(Student,on_delete=models.CASCADE,)
+    stu_sub = models.CharField(max_length=50,null=True,)
+    stu_marks = models.IntegerField()
+
+    class Meta:
+        db_table = "marks"
+
+    def __str__(self):
+        return str(self.stu_name)
