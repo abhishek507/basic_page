@@ -5,7 +5,22 @@
     <title>First Project</title>
 </head>
 <body>
-<h1>Welcome to Django Project</h1>
+<!--
+<marquee direcction="left">
+    {% for i in name %}
+        {{i}}
+    {% endfor %}
+</marquee>
+-->
+
+<marquee direcction="left">
+    {% if name == 'abhi' %}
+        <h1>Welcome to {{name}}</h1>
+    {% else %}
+        <h1 style="color:blue">This is a Student Application</h1>
+    {% endif %}
+</marquee>
+
 
 </body>
 </html>

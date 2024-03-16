@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EXAMINATION TABLE</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>exam_duration</th>
+        <th>Tot_marks</th>
+        <th>sub_code</th>
+        <th>sub_name</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for stu in data %}
+    <tr>
+        <td>{{stu.exam_duration}}</td>
+        <td>{{stu.Tot_marks}}</td>
+        <td>{{stu.sub_code}}</td>
+        <td>{{stu.sub_name}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
+
+
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% for stu in data %}
+    dur:{{stu.exam_duration}},
+    totalmarks:{{stu.Tot_marks}}
+    subjectcode:{{stu.sub_code}}
+{% endfor %}
+
+</body>
+</html> -->

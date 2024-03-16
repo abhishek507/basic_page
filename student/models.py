@@ -19,6 +19,7 @@ class Department(models.Model):
 class Student(models.Model):
 
     stu_name = models.CharField(max_length=100,null=True)
+
     stu_age = models.IntegerField()
     stu_dept = models.ForeignKey(Department,on_delete=models.CASCADE, null=True)
     stu_gender = models.CharField(choices=(('male','MALE'),('female','FEMALE')),max_length=20)
